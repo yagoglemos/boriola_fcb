@@ -1,0 +1,5 @@
+
+Runner.buttonEvents["vincular"]=function(pageObj,proxy,pageid){pageObj.buttonNames[pageObj.buttonNames.length]='vincular';if(!pageObj.buttonEventBefore['vincular']){pageObj.buttonEventBefore['vincular']=function(params,ctrl,pageObj,proxy,pageid,rowData,row,submit){var ajax=ctrl;var popup=Runner.displayPopup({url:"vanilhas_add.php?anilha="+rowData.keys,width:900,height:600,header:'Vincular'});return false;}}
+if(!pageObj.buttonEventAfter['vincular']){pageObj.buttonEventAfter['vincular']=function(result,ctrl,pageObj,proxy,pageid,rowData,row,params){var ajax=ctrl;}}
+$('a[id="vincular"]').each(function(){if($(this).closest('.gridRowAdd').length){return;}
+this.id="vincular"+"_"+Runner.genId();var button_vincular=new Runner.form.Button({id:this.id,btnName:"vincular"});button_vincular.init({args:[pageObj,proxy,pageid]});});};

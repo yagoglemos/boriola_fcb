@@ -1,0 +1,510 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-view" >
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="2"
+	data-v-margin="0"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="view_header" data-itemid="view_header" {$item_view_header} data-pageid="{$pageid}" >{$pagetitlelabel anilha view}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="2"
+	data-v-margin="0"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	</div>					</div>
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												 
+	<div class="panel panel-default form-section" data-itemtype="section" data-itemid="section2" {$item_section2} data-pageid="{$pageid}">
+		<div class="panel-heading" role="tab" {$section_section1_headattrs} data-toggle="collapse"   
+
+				href="#section1{$pageid}" aria-expanded="true" aria-controls="section1"
+
+		>
+		  <h4 class="panel-title">
+			<a role="button" >
+							</a>
+		  </h4>
+		</div>
+		<div  class="panel-collapse collapse in {$section_section1_xtrclass}" role="tabpanel"  {$section_section1_attrs}
+
+				id="section1{$pageid}" 
+		>
+		  <div class="panel-body">
+			{BEGIN section2_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="section2" id="form_section2_{$pageid}" data-makeup="small" {$form_section2} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr {$row_section2_0} >
+										
+
+{BEGIN cellblock_section2_c1}
+<td
+	{$cell_section2_c1}
+	class="r-align-center r-ori-vert"
+	
+			data-single
+				data-fullwidth
+		
+			data-cellId="section2_c1" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN quantidade_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_quantidade}  r-vertical-field" data-fieldname="quantidade" data-signal-error-for="quantidade{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="quantidade" data-fieldname="quantidade" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_quantidade}">
+		
+		{BEGIN quantidade_label}{$label anilha quantidade }{END quantidade_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$quantidade_value}	</div>
+
+		
+</div>
+
+
+{END quantidade_fieldblock}
+	
+								</td>
+			{END cellblock_section2_c1}
+								</tr>
+			</tbody></table>
+{END section2_block}
+		  </div>
+		</div>
+	</div>
+											 
+	<div class="panel panel-default form-section" data-itemtype="section" data-itemid="section1" {$item_section1} data-pageid="{$pageid}">
+		<div class="panel-heading" role="tab" {$section_section2_headattrs} data-toggle="collapse"   
+
+				href="#section2{$pageid}" aria-expanded="true" aria-controls="section2"
+
+		>
+		  <h4 class="panel-title">
+			<a role="button" >
+				Série FCB-BR/FCI			</a>
+		  </h4>
+		</div>
+		<div  class="panel-collapse collapse in {$section_section2_xtrclass}" role="tabpanel"  {$section_section2_attrs}
+
+				id="section2{$pageid}" 
+		>
+		  <div class="panel-body">
+			{BEGIN section1_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="section1" id="form_section1_{$pageid}" data-makeup="small" {$form_section1} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="3"
+		
+		data-v-width="6"
+	>
+	<tbody>
+										<tr {$row_section1_0} >
+										
+
+{BEGIN cellblock_section1_c3}
+<td
+	{$cell_section1_c3}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="section1_c3" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN fcbinicio_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_fcbinicio}  r-vertical-field" data-fieldname="fcbinicio" data-signal-error-for="fcbinicio{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="fcbinicio" data-fieldname="fcbinicio" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_fcbinicio}">
+		
+		{BEGIN fcbinicio_label}{$label anilha fcbinicio }{END fcbinicio_label}
+	</label>
+	<div class="" >
+		{$fcbinicio_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END fcbinicio_fieldblock}
+	
+								</td>
+			{END cellblock_section1_c3}
+			 
+																
+
+{BEGIN cellblock_section1_c}
+<td
+	{$cell_section1_c}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="section1_c" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN fcbfim_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_fcbfim}  r-vertical-field" data-fieldname="fcbfim" data-signal-error-for="fcbfim{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="fcbfim" data-fieldname="fcbfim" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_fcbfim}">
+		
+		{BEGIN fcbfim_label}{$label anilha fcbfim }{END fcbfim_label}
+	</label>
+	<div class="" >
+		{$fcbfim_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END fcbfim_fieldblock}
+	
+								</td>
+			{END cellblock_section1_c}
+			 
+																
+
+{BEGIN cellblock_section1_c4}
+<td
+	{$cell_section1_c4}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="section1_c4" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN ano_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_ano}  r-vertical-field" data-fieldname="ano" data-signal-error-for="ano{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="ano" data-fieldname="ano" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_ano}">
+		
+		{BEGIN ano_label}{$label anilha ano }{END ano_label}
+	</label>
+	<div class="" >
+		{$ano_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END ano_fieldblock}
+	
+								</td>
+			{END cellblock_section1_c4}
+								</tr>
+			</tbody></table>
+{END section1_block}
+		  </div>
+		</div>
+	</div>
+											 
+	<div class="panel panel-default form-section" data-itemtype="section" data-itemid="section" {$item_section} data-pageid="{$pageid}">
+		<div class="panel-heading" role="tab" {$section_section3_headattrs} data-toggle="collapse"   
+
+				href="#section3{$pageid}" aria-expanded="true" aria-controls="section3"
+
+		>
+		  <h4 class="panel-title">
+			<a role="button" >
+				nº de elemento de rastrabilidade MAPA(IN nº 5/2018) MAPA			</a>
+		  </h4>
+		</div>
+		<div  class="panel-collapse collapse in {$section_section3_xtrclass}" role="tabpanel"  {$section_section3_attrs}
+
+				id="section3{$pageid}" 
+		>
+		  <div class="panel-body">
+			{BEGIN section_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="section" id="form_section_{$pageid}" data-makeup="small" {$form_section} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="2"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr {$row_section_0} >
+										
+
+{BEGIN cellblock_section_c1}
+<td
+	{$cell_section_c1}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="section_c1" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN mapainicio_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_mapainicio}  r-vertical-field" data-fieldname="mapainicio" data-signal-error-for="mapainicio{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="mapainicio" data-fieldname="mapainicio" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_mapainicio}">
+		
+		{BEGIN mapainicio_label}{$label anilha mapainicio }{END mapainicio_label}
+	</label>
+	<div class="" >
+		{$mapainicio_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END mapainicio_fieldblock}
+											
+{BEGIN clube_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_clube}  r-vertical-field" data-fieldname="clube" data-signal-error-for="clube{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="clube" data-fieldname="clube" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_clube}">
+		
+		{BEGIN clube_label}{$label anilha clube }{END clube_label}
+	</label>
+	<div class="" >
+		{$clube_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END clube_fieldblock}
+	
+								</td>
+			{END cellblock_section_c1}
+			 
+																
+
+{BEGIN cellblock_section_c}
+<td
+	{$cell_section_c}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="section_c" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN mapafim_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_mapafim}  r-vertical-field" data-fieldname="mapafim" data-signal-error-for="mapafim{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="mapafim" data-fieldname="mapafim" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_mapafim}">
+		
+		{BEGIN mapafim_label}{$label anilha mapafim }{END mapafim_label}
+	</label>
+	<div class="" >
+		{$mapafim_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END mapafim_fieldblock}
+											
+{BEGIN disponivel_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_disponivel}  r-vertical-field" data-fieldname="disponivel" data-signal-error-for="disponivel{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="disponivel" data-fieldname="disponivel" >
+
+		<div class="col-md-12">
+	
+	<label class="" for="{$labelfor_disponivel}">
+		
+		{BEGIN disponivel_label}{$label anilha disponivel }{END disponivel_label}
+	</label>
+	<div class="" >
+		{$disponivel_value}	</div>
+
+		</div>
+		
+</div>
+
+
+{END disponivel_fieldblock}
+	
+								</td>
+			{END cellblock_section_c}
+								</tr>
+			</tbody></table>
+{END section_block}
+		  </div>
+		</div>
+	</div>
+	
+				{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="2"
+	data-v-margin="0"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-6
+	">
+	 
+		{BEGIN back_button}
+<span data-itemtype="view_back_list" data-itemid="view_back_list" {$item_view_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$backbutton_attrs} >
+							Voltar à Lista			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN close_button}
+<span data-itemtype="view_close" data-itemid="view_close" {$item_view_close} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" href="#" {$closebutton_attrs} >
+							Fechar Janela			</a>
+</span>
+{END close_button}
+	</div>			 
+				<div 
+	data-cellId="below-grid_c2" data-pageid="{$pageid}"	{$cell_below-grid_c2}
+	class="r-align-right r-ori-vert			col-md-6
+	">
+	 
+		<span data-itemtype="hamburger" data-itemid="hamburger" {$item_hamburger} data-pageid="{$pageid}" data-small data-button-item>
+</span>
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

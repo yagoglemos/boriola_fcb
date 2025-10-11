@@ -1,0 +1,2 @@
+
+Runner.pages.PageSettings.addPageEvent('anilhas',Runner.pages.constants.PAGE_EDIT,"afterPageReady",function(pageObj,proxy,pageid,inlineRow,inlineObject,row){Runner.getControl(pageid,'socio').makeReadonly();;});

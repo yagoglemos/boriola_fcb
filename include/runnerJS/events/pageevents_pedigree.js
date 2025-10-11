@@ -1,0 +1,2 @@
+
+Runner.pages.PageSettings.addPageEvent('pedigree',Runner.pages.constants.PAGE_ADD,"afterPageReady",function(pageObj,proxy,pageid,inlineRow,inlineObject,row){Runner.getControl(pageid,'pai').makeReadonly();Runner.getControl(pageid,'mae').makeReadonly();Runner.getControl(pageid,'cor').makeReadonly();;});

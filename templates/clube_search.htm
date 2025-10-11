@@ -1,0 +1,414 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-search" >
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="search_header" data-itemid="search_header" {$item_search_header} data-pageid="{$pageid}" >{$pagetitlelabel clube search}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	</div>					</div>
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="6"
+	>
+	<tbody>
+										<tr {$row_grid_0} >
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="6"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN id_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_id}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="id{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field" {$item_integrated_search_field} data-pageid="{$pageid}" data-field="id" data-fieldname="id" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_id}">
+		{$label clube id }	</label>
+	<div class="r-search-option">
+		{$searchtype_id}
+	</div>
+	<div class="r-search-field">
+		{$id_editcontrol}	</div>
+	<div class="r-search-field">
+		{$id_editcontrol1}
+	</div>
+	
+</div>
+
+{END id_fieldblock}
+											
+{BEGIN nome_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_nome}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="nome{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field1" {$item_integrated_search_field1} data-pageid="{$pageid}" data-field="nome" data-fieldname="nome" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_nome}">
+		{$label clube nome }	</label>
+	<div class="r-search-option">
+		{$searchtype_nome}
+	</div>
+	<div class="r-search-field">
+		{$nome_editcontrol}	</div>
+	<div class="r-search-field">
+		{$nome_editcontrol1}
+	</div>
+	
+</div>
+
+{END nome_fieldblock}
+											
+{BEGIN cidade_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_cidade}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="cidade{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field2" {$item_integrated_search_field2} data-pageid="{$pageid}" data-field="cidade" data-fieldname="cidade" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_cidade}">
+		{$label clube cidade }	</label>
+	<div class="r-search-option">
+		{$searchtype_cidade}
+	</div>
+	<div class="r-search-field">
+		{$cidade_editcontrol}	</div>
+	<div class="r-search-field">
+		{$cidade_editcontrol1}
+	</div>
+	
+</div>
+
+{END cidade_fieldblock}
+											
+{BEGIN uf_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_uf}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="uf{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field3" {$item_integrated_search_field3} data-pageid="{$pageid}" data-field="uf" data-fieldname="uf" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_uf}">
+		{$label clube uf }	</label>
+	<div class="r-search-option">
+		{$searchtype_uf}
+	</div>
+	<div class="r-search-field">
+		{$uf_editcontrol}	</div>
+	<div class="r-search-field">
+		{$uf_editcontrol1}
+	</div>
+	
+</div>
+
+{END uf_fieldblock}
+											
+{BEGIN pais_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_pais}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="pais{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field4" {$item_integrated_search_field4} data-pageid="{$pageid}" data-field="pais" data-fieldname="pais" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_pais}">
+		{$label clube pais }	</label>
+	<div class="r-search-option">
+		{$searchtype_pais}
+	</div>
+	<div class="r-search-field">
+		{$pais_editcontrol}	</div>
+	<div class="r-search-field">
+		{$pais_editcontrol1}
+	</div>
+	
+</div>
+
+{END pais_fieldblock}
+											
+{BEGIN telefone_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_telefone}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="telefone{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field5" {$item_integrated_search_field5} data-pageid="{$pageid}" data-field="telefone" data-fieldname="telefone" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_telefone}">
+		{$label clube telefone }	</label>
+	<div class="r-search-option">
+		{$searchtype_telefone}
+	</div>
+	<div class="r-search-field">
+		{$telefone_editcontrol}	</div>
+	<div class="r-search-field">
+		{$telefone_editcontrol1}
+	</div>
+	
+</div>
+
+{END telefone_fieldblock}
+											
+{BEGIN presidente_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_presidente}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="presidente{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field6" {$item_integrated_search_field6} data-pageid="{$pageid}" data-field="presidente" data-fieldname="presidente" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_presidente}">
+		{$label clube presidente }	</label>
+	<div class="r-search-option">
+		{$searchtype_presidente}
+	</div>
+	<div class="r-search-field">
+		{$presidente_editcontrol}	</div>
+	<div class="r-search-field">
+		{$presidente_editcontrol1}
+	</div>
+	
+</div>
+
+{END presidente_fieldblock}
+											
+{BEGIN federacao_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_federacao}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="federacao{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field7" {$item_integrated_search_field7} data-pageid="{$pageid}" data-field="federacao" data-fieldname="federacao" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_federacao}">
+		{$label clube federacao }	</label>
+	<div class="r-search-option">
+		{$searchtype_federacao}
+	</div>
+	<div class="r-search-field">
+		{$federacao_editcontrol}	</div>
+	<div class="r-search-field">
+		{$federacao_editcontrol1}
+	</div>
+	
+</div>
+
+{END federacao_fieldblock}
+											
+{BEGIN dataestatuto_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_dataestatuto}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="dataestatuto{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field8" {$item_integrated_search_field8} data-pageid="{$pageid}" data-field="dataestatuto" data-fieldname="dataestatuto" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_dataestatuto}">
+		{$label clube dataestatuto }	</label>
+	<div class="r-search-option">
+		{$searchtype_dataestatuto}
+	</div>
+	<div class="r-search-field">
+		{$dataestatuto_editcontrol}	</div>
+	<div class="r-search-field">
+		{$dataestatuto_editcontrol1}
+	</div>
+	
+</div>
+
+{END dataestatuto_fieldblock}
+											
+{BEGIN datassem_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_datassem}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="datassem{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field9" {$item_integrated_search_field9} data-pageid="{$pageid}" data-field="datassem" data-fieldname="datassem" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_datassem}">
+		{$label clube datassem }	</label>
+	<div class="r-search-option">
+		{$searchtype_datassem}
+	</div>
+	<div class="r-search-field">
+		{$datassem_editcontrol}	</div>
+	<div class="r-search-field">
+		{$datassem_editcontrol1}
+	</div>
+	
+</div>
+
+{END datassem_fieldblock}
+											
+{BEGIN datavenci_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_datavenci}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="datavenci{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field10" {$item_integrated_search_field10} data-pageid="{$pageid}" data-field="datavenci" data-fieldname="datavenci" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_datavenci}">
+		{$label clube datavenci }	</label>
+	<div class="r-search-option">
+		{$searchtype_datavenci}
+	</div>
+	<div class="r-search-field">
+		{$datavenci_editcontrol}	</div>
+	<div class="r-search-field">
+		{$datavenci_editcontrol1}
+	</div>
+	
+</div>
+
+{END datavenci_fieldblock}
+											
+{BEGIN ativo_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_ativo}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="ativo{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field11" {$item_integrated_search_field11} data-pageid="{$pageid}" data-field="ativo" data-fieldname="ativo" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_ativo}">
+		{$label clube ativo }	</label>
+	<div class="r-search-option">
+		{$searchtype_ativo}
+	</div>
+	<div class="r-search-field">
+		{$ativo_editcontrol}	</div>
+	<div class="r-search-field">
+		{$ativo_editcontrol1}
+	</div>
+	
+</div>
+
+{END ativo_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-12
+	">
+	 
+		<span data-itemtype="search_search" data-itemid="search_search" {$item_search_search} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$searchbutton_attrs} >
+							Buscar			</a>
+</span>
+	 
+		<span data-itemtype="search_reset" data-itemid="search_reset" {$item_search_reset} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$resetbutton_attrs} >
+							Limpar			</a>
+</span>
+	 
+		{BEGIN back_button}
+<span data-itemtype="search_back_list" data-itemid="search_back_list" {$item_search_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$backbutton_attrs} >
+							Voltar à Lista			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN cancel_button}
+<span data-itemtype="search_cancel" data-itemid="search_cancel" {$item_search_cancel} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="cancelButton{$id}" >
+							Cancela			</a>
+</span>
+{END cancel_button}
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

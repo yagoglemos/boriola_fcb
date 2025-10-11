@@ -1,0 +1,150 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+	},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+								
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jspagetitlelabel vanilhas export}","hidden":"{$item_hide_export_header}","fontSize":30},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+  },
+
+											],
+		
+		]
+	}
+}
+,
+		
+				
+								
+{
+	table: {
+	
+				
+		location: 'grid',
+		
+		
+		widths: [
+								"%", 
+					 ],	
+		
+			heights: [
+								
+			"%",
+			 
+				],
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":{$anilha_pdfvalue},"hidden":"{$item_hide_export_field1}"},
+				
+				
+			{"text":{$quantidade_pdfvalue},"hidden":"{$item_hide_export_field2}"},
+				
+				
+			{"text":{$fcbinicio_pdfvalue},"hidden":"{$item_hide_export_field3}"},
+				
+				
+			{"text":{$fcbfim_pdfvalue},"hidden":"{$item_hide_export_field4}"},
+				
+				
+			{"text":{$mapainicio_pdfvalue},"hidden":"{$item_hide_export_field5}"},
+				
+				
+			{"text":{$mapafim_pdfvalue},"hidden":"{$item_hide_export_field6}"},
+				
+				
+			{"text":{$socio_pdfvalue},"hidden":"{$item_hide_export_field}"},
+				
+				
+			{"text":{$mapafimbase_pdfvalue},"hidden":"{$item_hide_export_field7}"},
+				
+				
+			{"text":{$fcbfimbase_pdfvalue},"hidden":"{$item_hide_export_field8}"},
+				
+				
+			{"text":{$clube_pdfvalue},"hidden":"{$item_hide_export_field9}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+  },
+
+											],
+		
+		]
+	}
+}
+,
+		
+					]
+}
+  

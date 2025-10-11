@@ -1,0 +1,476 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-add" >
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="2"
+	data-v-margin="0"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="add_header" data-itemid="add_header" {$item_add_header} data-pageid="{$pageid}" >{$pagetitlelabel pombo add}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="2"
+	data-v-margin="0"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		{BEGIN message_block}
+<div data-itemtype="add_message" data-itemid="add_message" {$item_add_message} data-pageid="{$pageid}" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN message_back_button}
+		
+	<button class="btn btn-sm btn-default" {$backbutton_attrs}>Voltar à Lista</button>
+	{END message_back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>Exibir</button>
+{END view_page_button}
+{BEGIN edit_page_button}
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>Editar</button>
+{END edit_page_button}
+</div>
+</div>
+{END message_block}	</div>					</div>
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												 
+	<div class="panel panel-default form-section" data-itemtype="section" data-itemid="section" {$item_section} data-pageid="{$pageid}">
+		<div class="panel-heading" role="tab" {$section_section1_headattrs} data-toggle="collapse"   
+
+				href="#section1{$pageid}" aria-expanded="true" aria-controls="section1"
+
+		>
+		  <h4 class="panel-title">
+			<a role="button" >
+							</a>
+		  </h4>
+		</div>
+		<div  class="panel-collapse collapse in {$section_section1_xtrclass}" role="tabpanel"  {$section_section1_attrs}
+
+				id="section1{$pageid}" 
+		>
+		  <div class="panel-body">
+			{BEGIN section_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="section" id="form_section_{$pageid}" data-makeup="small" {$form_section} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="2"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr {$row_section_0} >
+										
+
+{BEGIN cellblock_section_c1}
+<td
+	{$cell_section_c1}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="section_c1" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN nome_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_nome}  r-vertical-field" 
+	data-signal-error-for="nome{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="nome" data-fieldname="nome" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_nome}">
+		{BEGIN nome_label}{$label pombo nome }{END nome_label}
+	</label>
+	<div class="r-edit-field">
+		{$nome_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="nome">
+		<div class="text-muted" >
+		{$tooltip pombo nome }		</div>
+	</div>
+</div>
+
+
+{END nome_fieldblock}
+											
+{BEGIN anilha_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_anilha}  r-vertical-field" 
+	data-signal-error-for="anilha{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="anilha" data-fieldname="anilha" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_anilha}">
+		{BEGIN anilha_label}{$label pombo anilha }{END anilha_label}
+	</label>
+	<div class="r-edit-field">
+		{$anilha_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="anilha">
+		<div class="text-muted" >
+		{$tooltip pombo anilha }		</div>
+	</div>
+</div>
+
+
+{END anilha_fieldblock}
+											
+{BEGIN sexo_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_sexo}  r-vertical-field" 
+	data-signal-error-for="sexo{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="sexo" data-fieldname="sexo" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_sexo}">
+		{BEGIN sexo_label}{$label pombo sexo }{END sexo_label}
+	</label>
+	<div class="r-edit-field">
+		{$sexo_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="sexo">
+		<div class="text-muted" >
+		{$tooltip pombo sexo }		</div>
+	</div>
+</div>
+
+
+{END sexo_fieldblock}
+											
+{BEGIN cor_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_cor}  r-vertical-field" 
+	data-signal-error-for="cor{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="cor" data-fieldname="cor" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_cor}">
+		{BEGIN cor_label}{$label pombo cor }{END cor_label}
+	</label>
+	<div class="r-edit-field">
+		{$cor_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="cor">
+		<div class="text-muted" >
+		{$tooltip pombo cor }		</div>
+	</div>
+</div>
+
+
+{END cor_fieldblock}
+	
+								</td>
+			{END cellblock_section_c1}
+			 
+																
+
+{BEGIN cellblock_section_c}
+<td
+	{$cell_section_c}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="section_c" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN pai_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_pai}  r-vertical-field" 
+	data-signal-error-for="pai{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="pai" data-fieldname="pai" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_pai}">
+		{BEGIN pai_label}{$label pombo pai }{END pai_label}
+	</label>
+	<div class="r-edit-field">
+		{$pai_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="pai">
+		<div class="text-muted" >
+		{$tooltip pombo pai }		</div>
+	</div>
+</div>
+
+
+{END pai_fieldblock}
+											
+{BEGIN mae_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_mae}  r-vertical-field" 
+	data-signal-error-for="mae{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="mae" data-fieldname="mae" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_mae}">
+		{BEGIN mae_label}{$label pombo mae }{END mae_label}
+	</label>
+	<div class="r-edit-field">
+		{$mae_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="mae">
+		<div class="text-muted" >
+		{$tooltip pombo mae }		</div>
+	</div>
+</div>
+
+
+{END mae_fieldblock}
+	
+								</td>
+			{END cellblock_section_c}
+								</tr>
+			</tbody></table>
+{END section_block}
+		  </div>
+		</div>
+	</div>
+											 
+	<div class="panel panel-default form-section" data-itemtype="section" data-itemid="section1" {$item_section1} data-pageid="{$pageid}">
+		<div class="panel-heading" role="tab" {$section_section2_headattrs} data-toggle="collapse"   
+
+				href="#section2{$pageid}" aria-expanded="true" aria-controls="section2"
+
+		>
+		  <h4 class="panel-title">
+			<a role="button" >
+							</a>
+		  </h4>
+		</div>
+		<div  class="panel-collapse collapse in {$section_section2_xtrclass}" role="tabpanel"  {$section_section2_attrs}
+
+				id="section2{$pageid}" 
+		>
+		  <div class="panel-body">
+			{BEGIN section1_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="section1" id="form_section1_{$pageid}" data-makeup="small" {$form_section1} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="2"
+		
+		data-v-width="3"
+	>
+	<tbody>
+										<tr {$row_section1_0} >
+										
+
+{BEGIN cellblock_section1_c1}
+<td
+	{$cell_section1_c1}
+	class=" r-ori-vert"
+	
+			
+			data-cellId="section1_c1" data-pageid="{$pageid}"
+		data-v-cell="2"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN observacao_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_observacao}  r-vertical-field" 
+	data-signal-error-for="observacao{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="observacao" data-fieldname="observacao" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_observacao}">
+		{BEGIN observacao_label}{$label pombo observacao }{END observacao_label}
+	</label>
+	<div class="r-edit-field">
+		{$observacao_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="observacao">
+		<div class="text-muted" >
+		{$tooltip pombo observacao }		</div>
+	</div>
+</div>
+
+
+{END observacao_fieldblock}
+											
+{BEGIN dono_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_dono}  r-vertical-field" 
+	data-signal-error-for="dono{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="dono" data-fieldname="dono" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_dono}">
+		{BEGIN dono_label}{$label pombo dono }{END dono_label}
+	</label>
+	<div class="r-edit-field">
+		{$dono_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="dono">
+		<div class="text-muted" >
+		{$tooltip pombo dono }		</div>
+	</div>
+</div>
+
+
+{END dono_fieldblock}
+											
+{BEGIN ativo_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_ativo}  r-vertical-field" 
+	data-signal-error-for="ativo{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field8" {$item_integrated_edit_field8} data-pageid="{$pageid}" data-field="ativo" data-fieldname="ativo" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_ativo}">
+		{BEGIN ativo_label}{$label pombo ativo }{END ativo_label}
+	</label>
+	<div class="r-edit-field">
+		{$ativo_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="ativo">
+		<div class="text-muted" >
+		{$tooltip pombo ativo }		</div>
+	</div>
+</div>
+
+
+{END ativo_fieldblock}
+	
+								</td>
+			{END cellblock_section1_c1}
+			 
+		
+							
+
+{BEGIN cellblock_section1_c}
+<td
+	{$cell_section1_c}
+	class=" r-ori-vert"
+	
+			data-single
+			
+			data-cellId="section1_c" data-pageid="{$pageid}"
+		data-v-cell="1"
+		
+>
+	<div edit-form-cell class="clearfix">
+									</td>
+			{END cellblock_section1_c}
+								</tr>
+			</tbody></table>
+{END section1_block}
+		  </div>
+		</div>
+	</div>
+	
+				{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="2"
+	data-v-margin="0"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-12
+	">
+	 
+		<span data-itemtype="add_save" data-itemid="add_save" {$item_add_save} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$savebutton_attrs} >
+							Salvar			</a>
+</span>
+	 
+		<span data-itemtype="add_reset" data-itemid="add_reset" {$item_add_reset} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="resetButton{$id}" >
+							Limpar			</a>
+</span>
+	 
+		{BEGIN back_button}
+<span data-itemtype="add_back_list" data-itemid="add_back_list" {$item_add_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="backButton{$id}" >
+							Voltar à Lista			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN cancel_button}
+<span data-itemtype="add_cancel" data-itemid="add_cancel" {$item_add_cancel} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="cancelButton{$id}" >
+							Cancela			</a>
+</span>
+{END cancel_button}
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>
