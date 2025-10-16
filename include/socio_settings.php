@@ -46,6 +46,9 @@ if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 	$fieldLabelssocio["Portuguese(Brazil)"]["perfilusu"] = "PERFIL";
 	$fieldToolTipssocio["Portuguese(Brazil)"]["perfilusu"] = "";
 	$placeHolderssocio["Portuguese(Brazil)"]["perfilusu"] = "";
+	$fieldLabelssocio["Portuguese(Brazil)"]["datavenci"] = "DATA DE VENCIMENTO";
+	$fieldToolTipssocio["Portuguese(Brazil)"]["datavenci"] = "";
+	$placeHolderssocio["Portuguese(Brazil)"]["datavenci"] = "";
 	$fieldLabelssocio["Portuguese(Brazil)"]["endereco"] = "ENDEREÇO";
 	$fieldToolTipssocio["Portuguese(Brazil)"]["endereco"] = "";
 	$placeHolderssocio["Portuguese(Brazil)"]["endereco"] = "";
@@ -85,6 +88,9 @@ if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 	$fieldLabelssocio["Portuguese(Brazil)"]["data_nascimento"] = "DATA DE NASCIMENTO";
 	$fieldToolTipssocio["Portuguese(Brazil)"]["data_nascimento"] = "";
 	$placeHolderssocio["Portuguese(Brazil)"]["data_nascimento"] = "";
+	$fieldLabelssocio["Portuguese(Brazil)"]["datavenci"] = "DATA DE VENCIMENTO";
+	$fieldToolTipssocio["Portuguese(Brazil)"]["datavenci"] = "";
+	$placeHolderssocio["Portuguese(Brazil)"]["datavenci"] = "";
 	$fieldLabelssocio["Portuguese(Brazil)"]["reset"] = "Reset";
 	$fieldToolTipssocio["Portuguese(Brazil)"]["reset"] = "";
 	$placeHolderssocio["Portuguese(Brazil)"]["reset"] = "";
@@ -217,6 +223,7 @@ $tdatasocio[".googleLikeFields"][] = "email";
 $tdatasocio[".googleLikeFields"][] = "datacricad";
 $tdatasocio[".googleLikeFields"][] = "ativo";
 $tdatasocio[".googleLikeFields"][] = "perfilusu";
+$tdatasocio[".googleLikeFields"][] = "datavenci";
 $tdatasocio[".googleLikeFields"][] = "endereco";
 $tdatasocio[".googleLikeFields"][] = "numero";
 $tdatasocio[".googleLikeFields"][] = "complemento";
@@ -263,7 +270,7 @@ $tdatasocio[".strOrderBy"] = $tstrOrderBy;
 $tdatasocio[".orderindexes"] = array();
 
 
-$tdatasocio[".sqlHead"] = "SELECT id,  	nome,  	cpf,  	email,  	datacricad,  	ativo,  	perfilusu,  	endereco,  	numero,  	complemento,  	telefone,  	cep,  	cidade,  	estado,  	pais,  	latpombal,  	longpombal,  	clube,  	senha,  	data_nascimento,  	reset,  	reset_date";
+$tdatasocio[".sqlHead"] = "SELECT id,  	nome,  	cpf,  	email,  	datacricad,  	ativo,  	perfilusu,  	datavenci,  	endereco,  	numero,  	complemento,  	telefone,  	cep,  	cidade,  	estado,  	pais,  	latpombal,  	longpombal,  	clube,  	senha,  	data_nascimento,  	reset,  	reset_date";
 $tdatasocio[".sqlFrom"] = "FROM socio";
 $tdatasocio[".sqlWhereExpr"] = "";
 $tdatasocio[".sqlTail"] = "";
@@ -324,6 +331,7 @@ $tdatasocio[".hideMobileList"][1]["id"] = true;
 		$tdatasocio[".hideMobileList"][1]["longpombal"] = true;
 		$tdatasocio[".hideMobileList"][1]["senha"] = true;
 		$tdatasocio[".hideMobileList"][1]["data_nascimento"] = true;
+		$tdatasocio[".hideMobileList"][1]["datavenci"] = true;
 		$tdatasocio[".hideMobileList"][5] = array();
 $tdatasocio[".hideMobileList"][5]["id"] = true;
 		$tdatasocio[".hideMobileList"][5]["datacricad"] = true;
@@ -341,6 +349,7 @@ $tdatasocio[".hideMobileList"][5]["id"] = true;
 		$tdatasocio[".hideMobileList"][5]["longpombal"] = true;
 		$tdatasocio[".hideMobileList"][5]["senha"] = true;
 		$tdatasocio[".hideMobileList"][5]["data_nascimento"] = true;
+		$tdatasocio[".hideMobileList"][5]["datavenci"] = true;
 
 
 
@@ -1347,6 +1356,93 @@ $tdatasocio[".hideMobileList"][5]["id"] = true;
 
 	$tdatasocio["perfilusu"] = $fdata;
 		$tdatasocio[".searchableFields"][] = "perfilusu";
+		
+//	datavenci
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 100;
+	$fdata["strName"] = "datavenci";
+	$fdata["GoodName"] = "datavenci";
+	$fdata["ownerTable"] = "socio";
+	$fdata["Label"] = GetFieldLabel("socio","datavenci");
+	$fdata["FieldType"] = 7; // Date field (igual ao data_nascimento)
+	$fdata["autoInc"] = false;
+	$fdata["readOnly"] = false;
+	$fdata["required"] = false;
+
+		$fdata["strField"] = "datavenci";
+		$fdata["sourceSingle"] = "datavenci";
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "datavenci";
+
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "Short Date");
+
+		$vdata["NeedEncode"] = true;
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Date");
+
+		$edata["weekdayMessage"] = array("message" => "Invalid week day", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+		$edata["IsRequired"] = false;
+
+			$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+		$edata["DateEditType"] = 5;
+	$edata["InitialYearFactor"] = 100;
+	$edata["LastYearFactor"] = 10;
+		
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	$edata["validateAs"]["customValidate"] = array();
+//	End validation
+
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+	$fdata["isSeparate"] = false;
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Equals";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Equals", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+//end of Filters settings
+
+	$tdatasocio["datavenci"] = $fdata;
+		$tdatasocio[".searchableFields"][] = "datavenci";
 //	endereco
 //	Custom field settings
 	$fdata = array();
@@ -3484,7 +3580,7 @@ function createSqlQuery_socio()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "id,  	nome,  	cpf,  	email,  	datacricad,  	ativo,  	perfilusu,  	endereco,  	numero,  	complemento,  	telefone,  	cep,  	cidade,  	estado,  	pais,  	latpombal,  	longpombal,  	clube,  	senha,  	data_nascimento,  	reset,  	reset_date";
+$proto0["m_strFieldList"] = "id,  	nome,  	cpf,  	email,  	datacricad,  	ativo,  	perfilusu,  	datavenci,  	endereco,  	numero,  	complemento,  	telefone,  	cep,  	cidade,  	estado,  	pais,  	latpombal,  	longpombal,  	clube,  	senha,  	data_nascimento,  	reset,  	reset_date";
 $proto0["m_strFrom"] = "FROM socio";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
@@ -3620,6 +3716,20 @@ $proto18["m_srcTableName"] = "socio";
 $proto18["m_expr"]=$obj;
 $proto18["m_alias"] = "";
 $obj = new SQLFieldListItem($proto18);
+
+$proto0["m_fieldlist"][]=$obj;
+						$proto19=array();
+			$obj = new SQLField(array(
+	"m_strName" => "datavenci",
+	"m_strTable" => "socio",
+	"m_srcTableName" => "socio"
+));
+
+$proto19["m_sql"] = "datavenci";
+$proto19["m_srcTableName"] = "socio";
+$proto19["m_expr"]=$obj;
+$proto19["m_alias"] = "";
+$obj = new SQLFieldListItem($proto19);
 
 $proto0["m_fieldlist"][]=$obj;
 						$proto20=array();
@@ -3846,6 +3956,7 @@ $proto51["m_columns"][] = "email";
 $proto51["m_columns"][] = "datacricad";
 $proto51["m_columns"][] = "ativo";
 $proto51["m_columns"][] = "perfilusu";
+$proto51["m_columns"][] = "datavenci";
 $proto51["m_columns"][] = "endereco";
 $proto51["m_columns"][] = "numero";
 $proto51["m_columns"][] = "complemento";
@@ -3859,6 +3970,7 @@ $proto51["m_columns"][] = "longpombal";
 $proto51["m_columns"][] = "clube";
 $proto51["m_columns"][] = "senha";
 $proto51["m_columns"][] = "data_nascimento";
+$proto51["m_columns"][] = "datavenci";
 $proto51["m_columns"][] = "reset";
 $proto51["m_columns"][] = "reset_date";
 $obj = new SQLTable($proto51);

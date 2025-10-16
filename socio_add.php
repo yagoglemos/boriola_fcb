@@ -7,6 +7,8 @@ require_once("include/socio_variables.php");
 require_once('include/xtempl.php');
 require_once('classes/addpage.php');
 require_once('include/lookuplinks.php');
+require_once('include/socio_datavenci_validate.php');
+require_once('include/socio_datavenci_hook.php');
 
 add_nocache_headers();
 

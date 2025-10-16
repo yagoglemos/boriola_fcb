@@ -306,6 +306,17 @@
 			</div>
 					</a>
 		</li>
+
+		<li>
+		<a>
+					  	<div class="checkbox">
+				<label>
+					<input type="checkbox" id="hide_datavenci" checked="checked" value="1" data-field="datavenci" data-fieldname="datavenci">
+					<span>{$label socio datavenci }</span>
+				</label>
+			</div>
+					</a>
+		</li>
 							<li>
 		<a>
 					  	<div class="checkbox">
@@ -696,8 +707,34 @@
 				 
 					{BEGIN cellblock_grid_headcell_field4}
 	<th
-	
 	{$cell_grid_headcell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$datavenci_class}
+			"
+
+			data-field="datavenci"
+	
+	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN datavenci_fieldheadercolumn}
+	{BEGIN datavenci_fieldheader}
+	<SPAN {$datavenci_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field29" {$item_simple_grid_field29} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="datavenci" data-fieldname="datavenci">
+	{$label socio datavenci }	{$arrow_icon_datavenci}
+	</SPAN>
+	{END datavenci_fieldheader}
+{END datavenci_fieldheadercolumn}
+
+	
+	</th>
+{END cellblock_grid_headcell_field4}
+				 
+					{BEGIN cellblock_grid_headcell_field5}
+	<th
+	
+	{$cell_grid_headcell_field5}
 	{$recordattrs}
 	class="
 		 r-ori-vert				{$email_class}
@@ -705,7 +742,7 @@
 
 			data-field="email"
 	
-	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -719,12 +756,12 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field4}
+	{END cellblock_grid_headcell_field5}
 				 
-					{BEGIN cellblock_grid_headcell_field5}
+					{BEGIN cellblock_grid_headcell_field6}
 	<th
 	
-	{$cell_grid_headcell_field5}
+	{$cell_grid_headcell_field6}
 	{$recordattrs}
 	class="
 		 r-ori-vert				{$perfilusu_class}
@@ -732,7 +769,7 @@
 
 			data-field="perfilusu"
 	
-	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -746,12 +783,12 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field5}
+	{END cellblock_grid_headcell_field6}
 				 
-					{BEGIN cellblock_grid_headcell_field6}
+					{BEGIN cellblock_grid_headcell_field7}
 	<th
 	
-	{$cell_grid_headcell_field6}
+	{$cell_grid_headcell_field7}
 	{$recordattrs}
 	class="
 		 r-ori-vert				{$senha_class}
@@ -759,7 +796,7 @@
 
 			data-field="senha"
 	
-	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -773,9 +810,9 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field6}
+	{END cellblock_grid_headcell_field7}
 				 
-					{BEGIN cellblock_grid_headcell_field7}
+					{BEGIN cellblock_grid_headcell_field19}
 	<th
 	
 	{$cell_grid_headcell_field7}
@@ -800,7 +837,7 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field7}
+	{END cellblock_grid_headcell_field19}
 				 
 					{BEGIN cellblock_grid_headcell_field8}
 	<th
@@ -1272,6 +1309,28 @@
 				 
 					{BEGIN cellblock_grid_cell_field4}
 	<td
+	{$cell_grid_cell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$datavenci_class}
+			"
+
+			data-field="datavenci"
+	
+	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN datavenci_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field30" {$item_simple_grid_field30} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="datavenci" data-fieldname="datavenci" data-default-width >
+{$datavenci_value}
+</span>
+{END datavenci_fieldcolumn}	
+	</td>
+{END cellblock_grid_cell_field4}
+				 
+					{BEGIN cellblock_grid_cell_field5}
+	<td
 	
 	{$cell_grid_cell_field4}
 	{$recordattrs}
@@ -1281,7 +1340,7 @@
 
 			data-field="email"
 	
-	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1291,7 +1350,7 @@
 </span>
 {END email_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field4}
+{END cellblock_grid_cell_field5}
 				 
 					{BEGIN cellblock_grid_cell_field5}
 	<td

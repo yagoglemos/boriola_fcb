@@ -213,7 +213,11 @@ if ($handle = fopen($arquivo, 'a')) {
             <p class="bold">Endereço: <?php echo mb_strtoupper($socio['endereco']) ?>, <?php echo $socio['numero'] ?>, <?php echo mb_strtoupper($socio['complemento']) ?>, <?php echo mb_strtoupper($socio['cidade']) ?>-<?php echo mb_strtoupper($socio['estado']) ?>, <?php echo $socio['cep'] ?></p>
             <div class="container2">
                 <div class="item"><p class="bold">Data de Emissão: <?php echo date("d/m/Y") ?></p></div>
-                <div class="item"><p class="bold">Validade: <?php echo date("d/m/Y", strtotime($clube['datavenci'])) ?></p></div>
+                <?php if($socio['perfilusu'] == 'SÓCIO INDIVIDUAL'): ?>
+                <div class="item"><p class="bold">Validade: <?php echo date("d/m/Y", strtotime($socio['datavenci'])) ?></p></div>
+                <?php else: ?>
+                    <div class="item"><p class="bold">Validade: <?php echo date("d/m/Y", strtotime($clube['datavenci'])) ?></p></div>
+                    <?php endif ;?>
               </div>
             <p style="margin-top: -4px">Declaro, sob as penas da lei, que:</p>
 

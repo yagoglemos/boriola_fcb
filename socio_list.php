@@ -17,6 +17,7 @@ require_once("include/socio_variables.php");
 require_once('classes/listpage.php');
 require_once('include/lookuplinks.php');
 
+
 //	Check whether the page was called as a part of Lookup wizard - List page with search.
 //  Verify the eligibility of such a call.
 

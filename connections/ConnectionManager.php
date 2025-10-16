@@ -140,10 +140,10 @@ class ConnectionManager extends ConnectionManager_Base
 		//	Don't change any of these lines manually!
 		//	Use 'Server database connections' feature on the Output screen in PHPRunner instead.
 		$data["connInfo"][0] = "localhost";
-		$data["connInfo"][1] = "u177586220_controle";
-		$data["connInfo"][2] = "3G5Nvb6w~I";
+		$data["connInfo"][1] = "root";
+		$data["connInfo"][2] = "-JJJ,8qHo7=N";
 		$data["connInfo"][3] = "";
-		$data["connInfo"][4] = "u177586220_controle";
+		$data["connInfo"][4] = "boriola";
 		$data["connInfo"][5] = ""; //currently unused
 		$data["connInfo"][6] = "1"; //currently unused
 		$data["ODBCString"] = "DRIVER={MySQL ODBC 3.51 Driver};Server=localhost;Uid=root;Pwd=;Database=columbofilia;OPTION=3";

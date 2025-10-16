@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{$pageTitle}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .header-fcb { background-color: #2c5530; color: white; }
+        .sidebar { background-color: #f8f9fa; min-height: 100vh; }
+        .content-area { padding: 20px; }
+        .stat-card { border-left: 4px solid #2c5530; }
+        .log-entry { font-family: monospace; font-size: 12px; }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark header-fcb">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">FCB - Notificações</a>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-2 sidebar">
+                <div class="list-group list-group-flush">
+                    <a href="menu.php" class="list-group-item list-group-item-action">← Voltar ao Menu</a>
+                    <a href="test_email_notifications.php" class="list-group-item list-group-item-action">Teste do Sistema</a>
+                    <a href="admin_email_notifications.php" class="list-group-item list-group-item-action active">Painel Admin</a>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="col-md-10 content-area">
+                <h2>Sistema de Notificações por Email</h2>
+                
+                {if $resultado}
+                <div class="alert alert-info">
+                    {$resultado}
+                </div>
+                {/if}
+
+                <!-- Estatísticas -->
+                <div class="row mb-4">
+                    <div class="col-md-3">
+                        <div class="card stat-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Vencimentos Hoje</h5>
+                                <h3 class="text-primary">0</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card stat-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Vencimentos em 15 dias</h5>
+                                <h3 class="text-warning">0</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card stat-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Vencimentos em 30 dias</h5>
+                                <h3 class="text-info">0</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card stat-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Emails Enviados Hoje</h5>
+                                <h3 class="text-success">0</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ações -->
+                <div class="row mb-4">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5>Ações Administrativas</h5>
+                            </div>
+                            <div class="card-body">
+                                <form method="post" class="d-inline">
+                                    <input type="hidden" name="action" value="create_log_table">
+                                    <button type="submit" class="btn btn-primary me-2">Criar Tabela de Log</button>
+                                </form>
+                                
+                                <form method="post" class="d-inline">
+                                    <input type="hidden" name="action" value="send_test">
+                                    <button type="submit" class="btn btn-success me-2">Enviar Email de Teste</button>
+                                </form>
+                                
+                                <form method="post" class="d-inline">
+                                    <input type="hidden" name="action" value="view_logs">
+                                    <button type="submit" class="btn btn-info">Ver Logs</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Logs -->
+                {if $logs}
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5>Logs de Notificações</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-sm">
+                                        <thead>
+                                            <tr>
+                                                <th>Data/Hora</th>
+                                                <th>Clube</th>
+                                                <th>Presidente</th>
+                                                <th>Dias Restantes</th>
+                                                <th>Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {foreach from=$logs item=log}
+                                            <tr>
+                                                <td>{$log.data_envio} {$log.hora_envio}</td>
+                                                <td>{$log.clube_nome}</td>
+                                                <td>{$log.presidente}</td>
+                                                <td>{$log.dias_restantes}</td>
+                                                <td><span class="badge bg-success">Enviado</span></td>
+                                            </tr>
+                                            {/foreach}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {/if}
+
+                <!-- Configurações -->
+                <div class="row mt-4">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5>Configurações</h5>
+                            </div>
+                            <div class="card-body">
+                                <p><strong>Cron Job:</strong></p>
+                                <code>0 9 * * * /media/Projetos/boriola_fcb/cron_email_notifications.sh</code>
+                                
+                                <hr>
+                                
+                                <p><strong>Arquivos do Sistema:</strong></p>
+                                <ul>
+                                    <li><code>email_notifications.php</code> - Script principal</li>
+                                    <li><code>email_config.php</code> - Configurações SMTP</li>
+                                    <li><code>cron_email_notifications.sh</code> - Script de cron</li>
+                                    <li><code>test_email_notifications.php</code> - Teste do sistema</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
+

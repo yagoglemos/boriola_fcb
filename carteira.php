@@ -180,7 +180,12 @@ if ($handle = fopen($arquivo, 'a')) {
                         <p class="segundotexto" style="font-size: 16px;">
                             <a style="font-weight: 600; font-size: 9px;">DATA DO REGISTRO 
                             	<?php echo date("d/m/Y", strtotime($socio['datacricad'])) ?></a> <br>
-                            <a style="font-weight: 600; font-size: 9px">VALIDADE <?php echo date("d/m/Y", strtotime('+1 year', strtotime($socio['datacricad']))) ?></a> <br>
+
+                            <?php if($socio['perfilusu'] == 'SÓCIO INDIVIDUAL'): ?>
+                            <a style="font-weight: 600; font-size: 9px">VALIDADE <?php echo date("d/m/Y", strtotime($socio['datavenci'])) ?></a> <br>
+                            <?php else: ?>
+                            <a style="font-weight: 600; font-size: 9px">VALIDADE <?php echo date("d/m/Y", strtotime($clube['datavenci'])) ?></a> <br>
+                            <?php endif ;?>
                         </p>
                     </div>
                     <br>
