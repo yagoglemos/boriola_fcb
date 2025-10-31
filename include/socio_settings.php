@@ -270,7 +270,7 @@ $tdatasocio[".strOrderBy"] = $tstrOrderBy;
 $tdatasocio[".orderindexes"] = array();
 
 
-$tdatasocio[".sqlHead"] = "SELECT id,  	nome,  	cpf,  	email,  	datacricad,  	ativo,  	perfilusu,  	datavenci,  	endereco,  	numero,  	complemento,  	telefone,  	cep,  	cidade,  	estado,  	pais,  	latpombal,  	longpombal,  	clube,  	senha,  	data_nascimento,  	reset,  	reset_date";
+$tdatasocio[".sqlHead"] = "SELECT id,  	datacricad,  	nome,  	cpf,  	data_nascimento,  	datavenci,  	email,  	perfilusu,  	senha,  	endereco,  	numero,  	complemento,  	telefone,  	cep,  	cidade,  	estado,  	pais,  	latpombal,  	longpombal,  	clube,  	ativo,  	reset,  	reset_date";
 $tdatasocio[".sqlFrom"] = "FROM socio";
 $tdatasocio[".sqlWhereExpr"] = "";
 $tdatasocio[".sqlTail"] = "";
@@ -3580,7 +3580,7 @@ function createSqlQuery_socio()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "id,  	nome,  	cpf,  	email,  	datacricad,  	ativo,  	perfilusu,  	datavenci,  	endereco,  	numero,  	complemento,  	telefone,  	cep,  	cidade,  	estado,  	pais,  	latpombal,  	longpombal,  	clube,  	senha,  	data_nascimento,  	reset,  	reset_date";
+$proto0["m_strFieldList"] = "id,  	datacricad,  	nome,  	cpf,  	data_nascimento,  	datavenci,  	email,  	perfilusu,  	senha,  	endereco,  	numero,  	complemento,  	telefone,  	cep,  	cidade,  	estado,  	pais,  	latpombal,  	longpombal,  	clube,  	ativo,  	reset,  	reset_date";
 $proto0["m_strFrom"] = "FROM socio";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
